@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paradis Français – Accueil</title>
+
+    <!-- Style minimaliste et moderne -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        header {
+            background: url('assets/images/banniere.jpg') center/cover no-repeat;
+            height: 380px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.35);
+        }
+
+        header img {
+            width: 180px;
+            z-index: 2;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 2.4rem;
+        }
+
+        p.description {
+            text-align: center;
+            max-width: 800px;
+            margin: 10px auto 40px;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .section {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        .card img {
+            width: 70px;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding: 25px;
+            text-align: center;
+            background: #222;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Bannière + Logo -->
+    <header>
+        <img src="assets/images/logo.png" alt="Logo Paradis Français">
+    </header>
+
+    <!-- Titre principal -->
+    <h1>Paradis Français</h1>
+
+    <!-- Description -->
+    <p class="description">
+        Paradis Français est un univers routier fictif créé pour Euro Truck Simulator 2.  
+        Découvrez des paysages inspirés de la France, des routes uniques, un Street View immersif,  
+        un wiki complet et une carte en constante évolution.
+    </p>
+
+    <!-- Sections principales -->
+    <div class="section">
+        <div class="cards">
+
+            <div class="card">
+                <img src="assets/images/icon-map.png" alt="">
+                <h3>Téléchargement</h3>
+                <p>Obtenez la dernière version de la map Paradis Français.</p>
+                <a href="downloads/" style="color:#0066cc;">Accéder</a>
+            </div>
+
+            <div class="card">
+                <img src="assets/images/icon-streetview.png" alt="">
+                <h3>Street View</h3>
+                <p>Explorez les villes et routes du monde Paradiani en 360°.</p>
+                <a href="streetview/" style="color:#0066cc;">Explorer</a>
+            </div>
+
+            <div class="card">
+                <img src="assets/images/icon-wiki.png" alt="">
+                <h3>Wiki Paradiani</h3>
+                <p>Découvrez le lore, les villes, les pays et l’histoire du monde.</p>
+                <a href="wiki/page.html" style="color:#0066cc;">Lire</a>
+            </div>
+
+            <div class="card">
+                <img src="assets/images/icon-dev.png" alt="">
+                <h3>Devblog</h3>
+                <p>Suivez l’évolution du projet et les nouveautés.</p>
+                <a href="devblog.html" style="color:#0066cc;">Voir</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        © 2026 Paradis Français — Projet ETS2 créé par Lolo
+    </footer>
+
+</body>
+</html>
