@@ -13,16 +13,39 @@
             color: #222;
         }
 
+        /* NAVBAR */
+        .navbar {
+            width: 100%;
+            background: #003366;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .navbar img {
+            width: 55px;
+            border-radius: 50%;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
         header {
             background: #003366;
             padding: 20px;
             text-align: center;
             color: white;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 2rem;
         }
 
         .container {
@@ -45,18 +68,8 @@
             padding: 15px 20px;
         }
 
-        .version-header h2 {
-            margin: 0;
-            font-size: 1.4rem;
-        }
-
         .version-body {
             padding: 20px;
-        }
-
-        .version-body p {
-            font-size: 1.1rem;
-            line-height: 1.6;
         }
 
         .changelog {
@@ -89,6 +102,18 @@
 
 <body>
 
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="/paradis-francais/"><img src="../assets/images/logo.png" alt="Logo"></a>
+        <ul>
+            <li><a href="/paradis-francais/">Accueil</a></li>
+            <li><a href="/paradis-francais/downloads/">Téléchargements</a></li>
+            <li><a href="/paradis-francais/wiki/page.html">Wiki</a></li>
+            <li><a href="/paradis-francais/streetview/">Street View</a></li>
+            <li><a href="/paradis-francais/devblog/">Devblog</a></li>
+        </ul>
+    </nav>
+
     <header>
         <h1>Téléchargements – Paradis Français</h1>
     </header>
@@ -103,8 +128,7 @@
             <div class="version-body">
                 <p>
                     La première version de Paradis Français est actuellement en développement.
-                    Elle contiendra uniquement le pays <strong>Paradis Français (le cœur)</strong>.
-                    Les régions Paradis Belge, Paradis Espagnol et Réserve Paradiani seront ajoutées dans les futures mises à jour.
+                    Elle contiendra uniquement le <strong>Paradis Français (le cœur)</strong>.
                 </p>
 
                 <div class="changelog">
@@ -124,28 +148,22 @@
             </div>
         </div>
 
-        <!-- Version future -->
+        <!-- Versions futures -->
         <div class="version">
             <div class="version-header">
                 <h2>Versions futures</h2>
             </div>
             <div class="version-body">
-                <p>
-                    Les futures versions ajouteront progressivement les autres pays du monde Paradiani :
-                </p>
+                <p>Les futures versions ajouteront progressivement les autres pays du monde Paradiani :</p>
 
                 <div class="changelog">
                     <h3>Contenu prévu :</h3>
                     <ul>
                         <li><strong>Paradis Belge</strong> – Routes, villes, ambiance belge</li>
-                        <li><strong>Paradis Espagnol</strong> – Routes, paysages, ambiance ibérique</li>
+                        <li><strong>Paradis Espagnol</strong> – Routes, paysages ibériques</li>
                         <li><strong>Réserve Paradiani</strong> – Zone spéciale, lore avancé</li>
                     </ul>
                 </div>
-
-                <p style="margin-top: 15px; font-style: italic;">
-                    Les fichiers seront disponibles ici dès leur publication.
-                </p>
             </div>
         </div>
 
