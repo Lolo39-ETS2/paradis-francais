@@ -13,7 +13,35 @@
             color: #222;
         }
 
-        /* Bannière panoramique */
+        /* NAVBAR */
+        .navbar {
+            width: 100%;
+            background: #003366;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .navbar img {
+            width: 55px;
+            border-radius: 50%;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        /* HERO */
         .hero {
             height: 420px;
             background: url('assets/images/banniere.jpg') center/cover no-repeat;
@@ -22,20 +50,18 @@
             align-items: center;
             justify-content: center;
         }
-
         .hero::after {
             content: "";
             position: absolute;
             inset: 0;
             background: rgba(0,0,0,0.35);
         }
-
         .hero img {
             width: 180px;
             z-index: 2;
         }
 
-        /* Sections horizontales */
+        /* SECTIONS */
         .section {
             background: white;
             margin: 40px auto;
@@ -44,27 +70,18 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             overflow: hidden;
         }
-
         .section img {
             width: 100%;
             height: 260px;
             object-fit: cover;
         }
-
         .section-content {
             padding: 25px;
         }
-
         .section-content h2 {
             margin-top: 0;
             font-size: 1.8rem;
         }
-
-        .section-content p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-
         .btn {
             display: inline-block;
             margin-top: 15px;
@@ -83,66 +100,29 @@
             background: #222;
             color: white;
         }
-
-        /* NAVBAR */
-        .navbar {
-            width: 100%;
-            background: #003366;
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-        
-        .nav-logo img {
-            width: 55px;
-            border-radius: 50%;
-        }
-        
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .nav-links li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: bold;
-            transition: 0.2s;
-        }
-        
-        .nav-links li a:hover {
-            opacity: 0.7;
-        }
-        
-        /* Responsive */
-        @media (max-width: 700px) {
-            .nav-links {
-                flex-direction: column;
-                background: #003366;
-                position: absolute;
-                top: 80px;
-                right: 0;
-                padding: 20px;
-                display: none;
-            }
-        }
     </style>
 </head>
 
 <body>
 
-    <!-- Bannière panoramique -->
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="/paradis-francais/"><img src="assets/images/logo.png" alt="Logo"></a>
+        <ul>
+            <li><a href="/paradis-francais/">Accueil</a></li>
+            <li><a href="/paradis-francais/downloads/">Téléchargements</a></li>
+            <li><a href="/paradis-francais/wiki/page.html">Wiki</a></li>
+            <li><a href="/paradis-francais/streetview/">Street View</a></li>
+            <li><a href="/paradis-francais/devblog/">Devblog</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
     <div class="hero">
         <img src="assets/images/logo.png" alt="Logo Paradis Français">
     </div>
 
-    <!-- Section Téléchargement -->
+    <!-- SECTION Téléchargement -->
     <div class="section">
         <img src="assets/images/section-download.jpg" alt="">
         <div class="section-content">
@@ -152,7 +132,7 @@
         </div>
     </div>
 
-    <!-- Section Wiki -->
+    <!-- SECTION Wiki -->
     <div class="section">
         <img src="assets/images/section-wiki.jpg" alt="">
         <div class="section-content">
@@ -162,7 +142,7 @@
         </div>
     </div>
 
-    <!-- Section Street View -->
+    <!-- SECTION Street View -->
     <div class="section">
         <img src="assets/images/section-streetview.jpg" alt="">
         <div class="section-content">
@@ -172,37 +152,19 @@
         </div>
     </div>
 
-    <!-- Section Devblog -->
+    <!-- SECTION Devblog -->
     <div class="section">
         <img src="assets/images/section-devblog.jpg" alt="">
         <div class="section-content">
             <h2>Devblog</h2>
             <p>Suivez l’évolution du projet, les nouveautés et les futures mises à jour.</p>
-            <a class="btn" href="devblog.html">Voir le Devblog</a>
+            <a class="btn" href="devblog/">Voir le Devblog</a>
         </div>
     </div>
 
-    <!-- Footer -->
     <footer>
         © 2026 Paradis Français — Projet ETS2 créé par Lolo
     </footer>
 
 </body>
-
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="nav-logo">
-        <a href="/paradis-francais/">
-            <img src="assets/images/logo.png" alt="Logo">
-        </a>
-    </div>
-
-    <ul class="nav-links">
-        <li><a href="/paradis-francais/">Accueil</a></li>
-        <li><a href="/paradis-francais/downloads/">Téléchargements</a></li>
-        <li><a href="/paradis-francais/wiki/page.html">Wiki</a></li>
-        <li><a href="/paradis-francais/streetview/">Street View</a></li>
-        <li><a href="/paradis-francais/devblog/">Devblog</a></li>
-    </ul>
-</nav>
 </html>
